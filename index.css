@@ -224,9 +224,17 @@ body.overflow {
   font-family: var(--accent-font);
 }
 
+.nav__select {
+  background: var(--bg);
+  color: var(--lang-select-color);
+  text-transform: uppercase;
+}
+
 :root {
   --accent-font: 'Inter', sans-serif;
   --base-font: 'Roboto', sans-serif;
+
+  --lang-select-color: #222829;
 
   --bg: #f3f4f1;
   --bg-light: #25ac61;
@@ -252,7 +260,7 @@ body.overflow {
   --copyright: #e7e7d5;
   --link-hover: #222829;
   --icon-color: ;
-  --top-games-hover-bg: #deeadf;
+  --top-games-hover-fg: #deeadf;
 }
 .loader-body {
   width: 100%;
@@ -569,11 +577,11 @@ body.overflow {
     max-height: 6rem;
   }
   .headerBlock {
-    padding: 1.5rem 2.5rem 1.5rem 2.7rem;
+    padding: 1.5rem 2.5rem 1.5rem 2.3rem;
   }
   .headerLogoContainer {
-    max-width: 7.25rem;
-    width: 7.25rem;
+    max-width: 6.1rem;
+    width: 6.1rem;
   }
   .header__logo {
     height: auto;
@@ -829,7 +837,6 @@ body.overflow {
   }
   .heroBlock {
     text-align: center;
-    background: var(--casino-cards);
   }
   .heroGroup {
     margin-bottom: 0;
@@ -1821,10 +1828,10 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
   top: 0;
   left: 0;
   transition: 0.5s ease-in-out;
-  background: var(--top-games-hover-bg);
+  color: var(--top-games-hover-fg);
+  background: var(--casino-cards);
   width: 16.5rem;
   height: 8.875rem;
-  color: var(--text);
   align-items: center;
   flex-direction: column;
   gap: 1rem;
@@ -1834,11 +1841,6 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
 .gamesButton,
 .gamesLink {
   width: 17.5rem;
-}
-.gamePlayText,
-.gameTitle,
-.gameTitle span {
-  color: var(--link-hover);
 }
 .gameImage {
   border-radius: 0.5rem;
@@ -1937,13 +1939,14 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
     width: 7.25rem;
   }
   .nav__list {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
   }
   .nav__item {
     display: none;
   }
   .nav__itemLarge {
-    display: block;
+    display: flex;
   }
   .header__logo {
     height: auto;
@@ -3359,9 +3362,9 @@ div:has(.moreInfoInput:checked + .moreInfoLabel) ~ .bonusDetailsInfo {
 margin-top: 8px;
   }
   .nav__linkLarge {
-        width: 6.2rem;
-        font-size: 10px;
-        padding: 0.7rem;
+    width: 5rem;
+    font-size: 10px;
+    padding: 0.5rem;
   }
   .advantages,
   .advantagesTitle {
@@ -3384,5 +3387,16 @@ margin-top: 8px;
   .supportTitle {
     margin-bottom: 2.5rem;
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 90rem) {
+  .heroTextGroup {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 70rem) {
+  .heroTextGroup {
+    max-width: 48%;
   }
 }
